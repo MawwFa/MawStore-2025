@@ -1,0 +1,234 @@
+/* File: ../css/gelap.css - Dark Mode */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../foto/rgelap.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+}
+
+body.light-mode::before {
+  background-image: url('../foto/terang.jpeg');
+}
+
+body.dark-mode::before {
+  background-image: url('../foto/gelap.jpeg');
+}
+
+.light-mode h1 {
+  color: black !important;
+}
+
+.dark-mode h1 {
+  color: white !important; 
+}
+
+/* Animasi untuk form elements */
+.textbox input, .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-box {
+  background-color: rgba(30, 30, 30, 0.95);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.error {
+  color: #ff6b6b;
+  background: #3a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.textbox {
+  margin: 15px 0;
+  position: relative;
+}
+
+.textbox input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  color: #ffffff;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.textbox span.material-symbols-rounded {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  box-shadow: 0px 2px 3px #ffff;
+}
+
+.btn:hover {
+  background-color: #4d4d4d;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.remember-me a {
+  margin-left: auto;
+  color: #ede444;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-footer {
+  text-align: center;
+  color: #ddd;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-footer a {
+  color: #4dabf7;
+  text-decoration: none;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+  
+  .theme-transition {
+  transition: all 0.5s ease-in-out !important;
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.9);
+}
+
+.logo {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.smk {
+    width: 120px; /* Larger size for SMK logo */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto; /* Centered with margin below */
+}
+
+.rpl {
+    width: 60px; /* Smaller size for RPL logo */
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  body {
+    background-image: url('../foto/gelap.jpeg');
+  }
+  .container {
+    padding: 30px;
+  }
+  
+  .login-box {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  
+  .textbox input {
+    padding: 10px 15px 10px 35px;
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .dark-mode-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
